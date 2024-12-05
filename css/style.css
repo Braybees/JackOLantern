@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'Cabin';
+    src: url(../fonts/Cabin-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'K2D';
+    src: url(../fonts/K2D-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../fonts/Inter-Regular.ttf); 
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	background: black;
+	box-sizing: border-box;
+}
+
+        /* Top Navbar */
+        .top-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fddde6; 
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+        }
+
+        .top-navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .top-navbar .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .top-navbar .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-navbar .links a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .top-navbar .buttons a {
+            text-decoration: none;
+            background-color: #b08900;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Video Background Section */
+        .video-section {
+            position: relative;
+			width: 100vw;
+			height: 400px;
+            /* height: 500px; */
+            overflow: hidden;
+			z-index: 20;
+        }
+
+		.play {
+			position: relative;
+			width: 100vw;
+		}
+
+        .video-section video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 1;
+        }
+
+        .bottom-navbar {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: rgba(43, 0, 0, 0.8); /* Dark translucent background */
+            padding: 10px 0;
+            font-family:  'K2D', sans-serif;
+        }
+
+        .bottom-navbar a {
+            text-decoration: none;
+            color: #ff7b00;
+            font-weight: bold;
+        }
+
+        .bottom-navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Dropdown Menus */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 5px 0;
+            color: #000;
+        }
+
+        .dropdown-content a:hover {
+            color: #ff7b00;
+        }
+
+        /* Button at Bottom Center */
+        .center-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            background-color: #fddde6; 
+            color: #ff7b00;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .center-button:hover {
+            background-color: #ff7b00;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .top-navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .bottom-navbar {
+                flex-wrap: wrap;
+            }
+        }
+
+a:hover {
+	color: #A86CDA;
+}
+li:last-child { 
+	float: left; 
+	margin-left: 0px;
+}
+
+/* Home Page CSS */
+
+.home { 
+	width: 100vw; 
+	height: 100vh; 
+
+}
+
+.one {
+	width: 1000px; /* this section has a fixed width. I recommend doing this for everything outside of the hero image section */
+	height: 100vh;
+	background: orangered;
+	margin: auto; /* makes sure that the section is centered on the page */
+}
+
+.one {
+	width: 1000px; /* this section has a fixed width. I recommend doing this for everything outside of the hero image section */
+	height: 100vh;
+	background: orangered;
+	margin: auto; /* makes sure that the section is centered on the page */
+}
+
+.two {
+	width: 1000px;
+	height: 100vh;
+	background: orange;
+	margin: auto;
+}
+
+.three {
+	width: 1000px;
+	height: 600px;
+	background: orange;
+	margin: auto;
+}
+
+.four {
+	width: 1000px;
+	height: 300px;
+	background: violet;
+	margin: auto;
+}
+
+.five {
+	width: 1000px;
+	height: 100px;
+	background: gray;
+	margin: auto;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #2b2b2b;
+    color: #fff;
+    flex-wrap: wrap;
+    font-family: 'K2D', sans-serif;
+}
+.footer .column {
+    flex: 1;
+    text-align: center;
+    padding: 0 10px;
+}
+.footer .support {
+    flex: 0 0 200px; /* Fixed width for the support column */
+    text-align: center;
+}
+.footer .support img {
+    max-width: 150px;
+    max-height: 50px;
+    object-fit: contain;
+    margin: 10px 0;
+    
+}
+
+.footer .contact img{
+    max-width: 150px;
+    max-height: 50px;
+    object-fit: contain;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.footer .membership button {
+    background-color: #b59d4c;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 60;
+    
+}
+.footer .membership button:hover {
+    background-color: #e0c870;
+}
+
+.footer .membership .memberbtn{
+    margin-top: 40px;
+    font-size: 16px;
+    
+}
+.footer .social-icons {
+    margin-top: 10px;
+}
+.footer .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #fff;
+    
+}
+.footer .social-icons a:hover {
+    color: #b59d4c;
+}
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
